@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Svq-rk-MOM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rba-mL-bOZ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="cA9-g2-R65"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNC-te-Fcn">
+                                <rect key="frame" x="0.0" y="353" width="393" height="499"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-yp-iPf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="499"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="height" secondItem="pNC-te-Fcn" secondAttribute="height" priority="250" id="9WA-mM-PMj"/>
+                                    <constraint firstItem="Gq1-Xs-Ubw" firstAttribute="trailing" secondItem="Obf-yp-iPf" secondAttribute="trailing" id="AeW-Su-u1T"/>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="top" secondItem="Gq1-Xs-Ubw" secondAttribute="top" id="B7w-hs-1V8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Obf-yp-iPf" secondAttribute="bottom" constant="-8" id="Qpu-yn-qkO"/>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="width" secondItem="pNC-te-Fcn" secondAttribute="width" id="Xbf-qB-ZgQ"/>
+                                    <constraint firstItem="Gq1-Xs-Ubw" firstAttribute="bottom" secondItem="Obf-yp-iPf" secondAttribute="bottom" id="dnJ-ZT-B7w"/>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="leading" secondItem="pNC-te-Fcn" secondAttribute="leading" id="gBf-Mn-j1q"/>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="leading" secondItem="Gq1-Xs-Ubw" secondAttribute="leading" id="hUu-m1-8eL"/>
+                                    <constraint firstItem="Obf-yp-iPf" firstAttribute="top" secondItem="pNC-te-Fcn" secondAttribute="top" id="ujx-4g-UdV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Obf-yp-iPf" secondAttribute="trailing" id="uwq-Np-tGr"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="AJ8-Rk-LTB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Gq1-Xs-Ubw"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pNC-te-Fcn" secondAttribute="trailing" id="7tK-Ut-a7n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rba-mL-bOZ" secondAttribute="trailing" id="95C-eW-Ueq"/>
+                            <constraint firstItem="pNC-te-Fcn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Upe-O7-cHg"/>
+                            <constraint firstAttribute="bottom" secondItem="pNC-te-Fcn" secondAttribute="bottom" id="amc-la-0n6"/>
+                            <constraint firstItem="rba-mL-bOZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kHU-Ka-JUP"/>
+                            <constraint firstItem="pNC-te-Fcn" firstAttribute="top" secondItem="rba-mL-bOZ" secondAttribute="bottom" id="vpF-qn-Wgq"/>
+                            <constraint firstItem="rba-mL-bOZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vxY-qd-nWr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TEX-si-hkc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1031.2977099236641" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7f5-rG-5Mi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Svq-rk-MOM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fe-DH-FgR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Icq-4R-g7h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYO-4y-CkV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.58015267175573" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
